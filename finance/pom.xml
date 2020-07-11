@@ -9,14 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fastjson</artifactId>
-
+    <groupId>com.zxin.java.cherry</groupId>
+    <artifactId>finance</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.62</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
+
 
 </project>

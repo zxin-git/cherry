@@ -1,1 +1,1 @@
-This is for Java Library Component.
+This is for Java Application.
