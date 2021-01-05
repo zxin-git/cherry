@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.zxin.java.common.JacksonMapper;
 import com.zxin.java.fund.bo.FundFee;
-import com.zxin.java.fund.dto.FeeData;
+import com.zxin.java.fund.sina.data.FeeData;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

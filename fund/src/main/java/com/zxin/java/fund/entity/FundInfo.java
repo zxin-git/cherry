@@ -2,14 +2,13 @@ package com.zxin.java.fund.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import java.math.BigDecimal;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -17,7 +16,7 @@ import java.time.LocalDate;
  */
 @Entity
 @Data
-public class FundDynamic {
+public class FundInfo implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,14 +24,19 @@ public class FundDynamic {
 
     private String code;
 
-    private String fundName;
+    private String fullName;
 
-    private LocalDate dataDate;
+    private String shortName;
 
-    private BigDecimal scale;
+    private LocalDate createDate;
 
-    private String managerCode;
+    private String type1;
 
-    private String managerName;
+    private String type2;
 
+    private String type3;
+
+    private String managementCompanyCode;
+
+    private String hostingBankCode;
 }

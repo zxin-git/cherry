@@ -11,7 +11,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -41,6 +43,7 @@ public enum JacksonMapper{
 
 		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 				.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
+				.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true) //大小写不敏感
 				.setSerializationInclusion(JsonInclude.Include.NON_NULL)
 				.registerModule(timeModule)
 				.registerModule(new ParameterNamesModule())

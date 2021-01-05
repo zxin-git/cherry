@@ -1,4 +1,4 @@
-package com.zxin.java.fund.dto;
+package com.zxin.java.fund.sina.data;
 
 import lombok.Data;
 

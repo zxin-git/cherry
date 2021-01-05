@@ -7,32 +7,28 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.io.Serializable;
 
 /**
  * @author zxin
  */
 @Entity
 @Data
-public class FundDynamic {
+public class FundDesc implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(unique = true)
     private String code;
 
     private String fundName;
 
-    private LocalDate dataDate;
+    private String investGoal;
 
-    private BigDecimal scale;
+    private String investStandard;
 
-    private String managerCode;
-
-    private String managerName;
+    private String investScope;
 
 }

@@ -9,30 +9,38 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 /**
  * @author zxin
  */
 @Entity
 @Data
-public class FundDynamic {
+@Table(uniqueConstraints = @UniqueConstraint(columnNames="code"))
+public class FundCharge implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(unique = true)
     private String code;
 
     private String fundName;
 
-    private LocalDate dataDate;
+    private String chargeType;
 
-    private BigDecimal scale;
+    private BigDecimal managementCharge;
 
-    private String managerCode;
+    private BigDecimal hostingCharge;
 
-    private String managerName;
+    private BigDecimal serviceCharge;
 
+    private BigDecimal buyCharge;
+
+    /**
+     * 阶级赎回费
+     */
+    private String redeemCharge;
 }
