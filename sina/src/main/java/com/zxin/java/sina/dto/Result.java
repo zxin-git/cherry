@@ -33,5 +33,6 @@ public class Result<T> {
     @Data
     public static class DataObj<T>{
         private List<T> data;
+        private Integer totalNum;
     }
 }
